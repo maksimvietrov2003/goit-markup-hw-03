@@ -87,6 +87,9 @@ h1, h2, h3, p {
   display: inline-flex;
   align-items: center;
   padding: 24px 16px;
+   display: inline-flex;
+  align-items: center;
+  padding: 24px 0; /* тільки вертикальний паддінг */
 }
 
 .nav-link:hover,
@@ -205,15 +208,17 @@ h1, h2, h3, p {
 }
 
 .team-list {
-  display: flex;
+ display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .team-cart {
+  flex: 1 1 calc((100% - 72px) / 4); /* 4 картки, gap = 24px * 3 = 72px */
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
-  width: 264px;
 }
+
 
 .team-info {
   padding: 32px 16px;
